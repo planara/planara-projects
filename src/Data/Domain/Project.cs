@@ -21,4 +21,14 @@ public class Project: BaseEntity
     /// Описание проекта
     /// </summary>
     public string? Description { get; set; }
+
+    /// <summary>
+    /// Ссылка на файл проекта
+    /// </summary>
+    public string? FileUrl { get; set; } = null!;
+
+    /// <summary>
+    /// Приватный ли проект
+    /// </summary>
+    public bool IsPrivate { get; set; } = true;
 }
