@@ -31,7 +31,7 @@ builder.Services
     .AddQueryType(m => m.Name(OperationTypeNames.Query))
     .AddType<Query>()
     .AddMutationType(m => m.Name(OperationTypeNames.Mutation))
-    // .AddType<Mutation>()
+    .AddType<Mutation>()
     .AddAuthorization() 
     .AddFluentValidation(options =>
     {
