@@ -14,7 +14,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <PackageReference Include="Planara.Common" Version="1.7.0" />
+      <PackageReference Include="Planara.Common" Version="1.8.0" />
     </ItemGroup>
 
 </Project>

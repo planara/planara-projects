@@ -46,7 +46,7 @@ builder.Services
                 c => c.CertificateValidation += (_, _, _, _) => true
             ),
         builder.Configuration.GetValue<string>("GraphQL:Name")!,
-        WellKnownSchema.Accounts
+        WellKnownSchema.Projects
     )
     .InitializeOnStartup();
 
