@@ -55,9 +55,9 @@ public class Query
     /// <param name="claimsPrincipal"></param>
     /// <returns></returns>
     [Authorize]
-    [UseSorting]
-    [UseFiltering]
     [UsePaging(MaxPageSize = 50, DefaultPageSize = 20)]
+    [UseFiltering]
+    [UseSorting]
     [GraphQLDescription("Получить список проектов пользователя")]
     public IQueryable<ProjectResponse> GetMyProjects(
         [Service] DataContext dataContext,
