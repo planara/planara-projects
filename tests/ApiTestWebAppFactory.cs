@@ -37,15 +37,21 @@ public class ApiTestWebAppFactory: WebApplicationFactory<Program>, IAsyncLifetim
                 opt.UseNpgsql(_postgres.GetConnectionString()));
             
             services
-                .AddAuthentication(TestAuthHandler.Scheme)
+                .AddAuthentication(options =>
+                {
+                    options.DefaultScheme = TestAuthHandler.AuthenticationScheme;
+                    options.DefaultAuthenticateScheme = TestAuthHandler.AuthenticationScheme;
+                    options.DefaultChallengeScheme = TestAuthHandler.AuthenticationScheme;
+                })
                 .AddScheme<AuthenticationSchemeOptions, TestAuthHandler>(
-                    TestAuthHandler.Scheme,
+                    TestAuthHandler.AuthenticationScheme,
                     _ => { });
 
             services.PostConfigure<AuthenticationOptions>(options =>
             {
-                options.DefaultAuthenticateScheme = TestAuthHandler.Scheme;
-                options.DefaultChallengeScheme = TestAuthHandler.Scheme;
+                options.DefaultScheme = TestAuthHandler.AuthenticationScheme;
+                options.DefaultAuthenticateScheme = TestAuthHandler.AuthenticationScheme;
+                options.DefaultChallengeScheme = TestAuthHandler.AuthenticationScheme;
             });
         });
         
