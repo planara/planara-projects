@@ -55,7 +55,7 @@ public class Query
     /// <param name="claimsPrincipal"></param>
     /// <returns></returns>
     [Authorize]
-    [UsePaging(MaxPageSize = 50, DefaultPageSize = 20)]
+    [UsePaging(MaxPageSize = 50, DefaultPageSize = 20, IncludeTotalCount = true)]
     [UseFiltering]
     [UseSorting]
     [GraphQLDescription("Получить список проектов пользователя")]

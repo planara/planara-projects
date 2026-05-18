@@ -5,6 +5,7 @@ namespace Planara.Projects.Requests;
 /// <summary>
 /// Запрос на создание проекта
 /// </summary>
+[GraphQLDescription("Запрос на создание проекта")]
 public class CreateProjectRequest
 {
     /// <summary>

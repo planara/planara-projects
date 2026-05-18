@@ -3,10 +3,10 @@ using HotChocolate;
 namespace Planara.Projects.Requests;
 
 /// <summary>
-/// Запрос на получение проекта по ID
+/// Запрос на удаление проекта
 /// </summary>
 [GraphQLDescription("Запрос на удаление проекта")]
-public class GetProjectByIdRequest
+public class DeleteProjectRequest
 {
     /// <summary>
     /// ID проекта
